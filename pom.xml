@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>cg</name>
-	<description>开封网</description>
+	<description>desc</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -39,6 +39,12 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
 		<dependency>
 			<groupId>com.github.pagehelper</groupId>
 			<artifactId>pagehelper-spring-boot-starter</artifactId>
@@ -48,7 +54,6 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<scope>runtime</scope>
 		</dependency>
 
 		<!-- druid数据库连接池 -->
@@ -57,7 +62,11 @@
 			<artifactId>druid</artifactId>
 			<version>1.0.26</version>
 		</dependency>
-
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -99,6 +108,11 @@
 			<version>RELEASE</version>
 		</dependency>
 
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.19</version>
+        </dependency>
 
 		<dependency>
 			<groupId>aliyun-message-sdk-core</groupId>

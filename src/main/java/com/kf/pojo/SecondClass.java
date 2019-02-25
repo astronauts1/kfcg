@@ -1,45 +1,17 @@
 package com.kf.pojo;
 
+import lombok.Data;
+
+import java.io.Serializable;
+
 /**
  * Created by 18236 on 2017/9/25.
  */
-public class SecondClass {
+@Data
+public class SecondClass implements Serializable {
+    private static final long serialVersionUID = -3800427506405883399L;
     private int scId;
     private String scName;
     private int scMcId;
-
-    public int getScId() {
-        return scId;
-    }
-
-    public void setScId(int scId) {
-        this.scId = scId;
-    }
-
-    public String getScName() {
-        return scName;
-    }
-
-    public void setScName(String scName) {
-        this.scName = scName;
-    }
-
-
-    public int getScMcId() {
-        return scMcId;
-    }
-
-    public void setScMcId(int scMcId) {
-        this.scMcId = scMcId;
-    }
-
-    public int getScClickNums() {
-        return scClickNums;
-    }
-
-    public void setScClickNums(int scClickNums) {
-        this.scClickNums = scClickNums;
-    }
-
     private int scClickNums;
 }

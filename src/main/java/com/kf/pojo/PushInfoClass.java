@@ -1,31 +1,15 @@
 package com.kf.pojo;
 
-public class PushInfoClass {
+
+import lombok.Data;
+
+import java.io.Serializable;
+
+@Data
+public class PushInfoClass implements Serializable {
+    private static final long serialVersionUID = -1776559059917773318L;
     private int picId;
     private int mcId;
     private String picName;
 
-    public int getPicId() {
-        return picId;
-    }
-
-    public void setPicId(int picId) {
-        this.picId = picId;
-    }
-
-    public int getMcId() {
-        return mcId;
-    }
-
-    public void setMcId(int mcId) {
-        this.mcId = mcId;
-    }
-
-    public String getPicName() {
-        return picName;
-    }
-
-    public void setPicName(String picName) {
-        this.picName = picName;
-    }
 }

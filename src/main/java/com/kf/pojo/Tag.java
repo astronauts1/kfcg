@@ -1,38 +1,18 @@
 package com.kf.pojo;
 
+import lombok.Data;
+
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by 18236 on 2017/9/26.
  */
-public class Tag {
+@Data
+public class Tag implements Serializable {
+    private static final long serialVersionUID = -2248751998139431176L;
     private List<TagContent> tagContents;
 
     private String tagName;
     private int tagId;
-
-    public String getTagName() {
-        return tagName;
-    }
-
-    public void setTagName(String tagName) {
-        this.tagName = tagName;
-    }
-
-
-    public List<TagContent> getTagContents() {
-        return tagContents;
-    }
-
-    public void setTagContents(List<TagContent> tagContents) {
-        this.tagContents = tagContents;
-    }
-
-    public int getTagId() {
-        return tagId;
-    }
-
-    public void setTagId(int tagId) {
-        this.tagId = tagId;
-    }
 }

@@ -140,7 +140,7 @@
             <div class="col-xs-3">
                 <div class="logo foot_logo">
                     <p><span style="font-size: 16px;font-weight: 500;color: #aaaaaa;">客服电话:</span></p>
-                    <p style="font-size: 24px;color: #ff552e;">0371-23253932</p>
+                    <p style="font-size: 24px;color: #ff552e;">xxxx-xxxxxxxx</p>
                     <p style="font-size: 10px;color: #aaa;">工作时间:</p>
                     <p>周一至周六:上午8点-下午5点</p>
                 </div>
@@ -188,8 +188,7 @@
             </div>
         </div>
         <div class="row">
-            <p style="text-align: center">Copyright © 麦芒网 ｜河南省麦芒网络科技有限公司所有</p>
-            <p style="text-align: center"><a href="http://www.miibeian.gov.cn">豫ICP备17047159</a></p>
+            <p style="text-align: center">Copyright © tber's Group</p>
         </div>
     </div>
 </div>

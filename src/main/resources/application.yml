@@ -8,7 +8,7 @@ server:
 spring:
   #数据源配置
   datasource:
-    url: jdbc:mysql://localhost:3306/kfcg?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://188.131.172.54:3306/kfcg?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
 #    password: 123456
     password: xdjr1230-KFCG
@@ -24,13 +24,18 @@ spring:
           request-context-attribute: request
           settings:
             template_exception_handler: ignore
-
+  redis:
+    host: 188.131.172.54
+    port: 6379
 mybatis:
   #实体类所做包
   type-aliases-package: com.kf.pojo
   #mappers.xml所在位置
   mapper-locations: classpath:mappers/*.xml
-  configLocation: classpath:/mybatis-config.xml
+  #开启redis 二级缓存
+  configuration:
+    cache-enabled: true
+    map-underscore-to-camel-case: true
 
 # LOGGING
 logging:
@@ -44,14 +49,6 @@ page:
   pageSize: 10
 
 path:
-#  WinPathValue: C:/Users/ch/Desktop/
-#  LinuxPathValue:
-
-#  pathValue: /home/kfcg/
   pathValue: /home/kfcg/
 pagehelper:
   helper-dialect: mysql
-
-#  pathValue: C:/Users/ch/Desktop/cg/src/main/resources/static/img/pushimg/
-#  headImgPath: C:/Users/ch/Desktop/cg/src/main/resources/static/img/headImg/
-# companyImgPath: C:/Users/ch/Desktop/cg/src/main/resources/static/img/company/

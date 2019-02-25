@@ -4,6 +4,7 @@ import com.kf.pojo.BaseInfo;
 import com.kf.pojo.PushInfo;
 import com.kf.vo.OtherInfo;
 import com.kf.vo.TagValue;
+import org.apache.ibatis.annotations.CacheNamespace;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -85,7 +86,8 @@ public interface PushInfoMapper {
     /**
      * 获取用户收藏数
      */
-    Integer getCollectionCountByUserId(@Param("userId")Integer userId);   /**
+    Integer getCollectionCountByUserId(@Param("userId")Integer userId);
+    /**
      * 获取用户发布数
      */
     Integer getPushCountByUserId(@Param("userId")Integer userId);

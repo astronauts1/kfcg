@@ -1,25 +1,15 @@
 package com.kf.pojo;
 
+import lombok.Data;
+
+import java.io.Serializable;
+
 /**
  * Created by 18236 on 2017/9/26.
  */
-public class District {
+@Data
+public class District implements Serializable {
+    private static final long serialVersionUID = 3372279707195708858L;
     private int districtId;
     private String districtName;
-
-    public int getDistrictId() {
-        return districtId;
-    }
-
-    public void setDistrictId(int districtId) {
-        this.districtId = districtId;
-    }
-
-    public String getDistrictName() {
-        return districtName;
-    }
-
-    public void setDistrictName(String districtName) {
-        this.districtName = districtName;
-    }
 }

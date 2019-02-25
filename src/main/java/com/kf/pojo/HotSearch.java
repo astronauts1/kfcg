@@ -1,10 +1,13 @@
 package com.kf.pojo;
 
+import java.io.Serializable;
+
 /**
  * 该实体作用是热词搜索
  * Created by 18236 on 2017/10/26.
  */
-public class HotSearch {
+public class HotSearch implements Serializable {
+    private static final long serialVersionUID = -4645811153297505272L;
     private Integer hotSearchId;
     private Integer hotSearchBz;
     private String hotSearchCt;

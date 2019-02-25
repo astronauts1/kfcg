@@ -81,7 +81,7 @@ public class UserController{
             User user1 = userService.getUser(user);
             if(user1!=null){
                 //修改最后登陆日期
-                Timestamp time = new Timestamp(new Date().getTime());
+                Timestamp time = new Timestamp(System.currentTimeMillis());
                 userService.updateUserLastLoginTime(user1.getUserId(),time);
                 //session记住当前用户
 

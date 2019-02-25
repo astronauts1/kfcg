@@ -98,7 +98,7 @@ public class MobileMainController {
              return new ModelAndView("redirect:/m/push?mcId="+pushInfo.getPiMc()+"&scId="+pushInfo.getPiSc());
         }
 //        设置当前时间
-        Timestamp ts = new Timestamp(new Date().getTime());
+        Timestamp ts = new Timestamp(System.currentTimeMillis());
         pushInfo.setPiPushDate(ts);
 //        返回自增长的id
         Integer piId = pushInfoService.addPushInfo(pushInfo);
@@ -160,26 +160,26 @@ public class MobileMainController {
 //        modelAndView.addObject("currDistrictId", districtId);
 //        return modelAndView;
 //    }
-
-    //对前台发来的url去重
-    private List<String> getTagValue(String[] tagId, List<TagValue> newTagId) {
-        List<String> tagValue = new ArrayList<>();
-        if (tagId != null && tagId.length > 0) {
-            List<String> tagName = new ArrayList<String>();
-            for (String str : tagId) {
-                String[] tag = str.split("-");
-                if (!tagName.contains(tag[0]) && !tag[1].equals("0")) {
-                    tagValue.add(tag[1]);
-                    TagValue tagValue1 = new TagValue();
-                    tagValue1.setTagId(Integer.valueOf(tag[0]));
-                    tagValue1.setTcId(Integer.valueOf(tag[1]));
-                    newTagId.add(tagValue1);
-                }
-                tagName.add(tag[0]);
-            }
-        }
-        return tagValue;
-    }
+//
+//    //对前台发来的url去重
+//    private List<String> getTagValue(String[] tagId, List<TagValue> newTagId) {
+//        List<String> tagValue = new ArrayList<>();
+//        if (tagId != null && tagId.length > 0) {
+//            List<String> tagName = new ArrayList<String>();
+//            for (String str : tagId) {
+//                String[] tag = str.split("-");
+//                if (!tagName.contains(tag[0]) && !tag[1].equals("0")) {
+//                    tagValue.add(tag[1]);
+//                    TagValue tagValue1 = new TagValue();
+//                    tagValue1.setTagId(Integer.valueOf(tag[0]));
+//                    tagValue1.setTcId(Integer.valueOf(tag[1]));
+//                    newTagId.add(tagValue1);
+//                }
+//                tagName.add(tag[0]);
+//            }
+//        }
+//        return tagValue;
+//    }
 
 
     @GetMapping("/infomation")
