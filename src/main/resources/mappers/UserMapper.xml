@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kf.mapper.UserMapper" >
+
+    <!--插入用户并返回id值 -->
+    <insert id="addUser" parameterType="com.kf.pojo.User">
+        <selectKey keyProperty="userId" resultType="java.lang.Integer">
+            select LAST_INSERT_ID()
+        </selectKey>
+        INSERT INTO user (user_name,user_password,user_phone,create_time,lasted_time) VALUES (#{userName,jdbcType=VARCHAR},#{userPassword,jdbcType=VARCHAR},#{userPhone},#{createTime},#{lastedTime})
+    </insert>
+
+
+    <select id="selectUser" parameterType="com.kf.pojo.User" resultType="com.kf.pojo.User">
+        SELECT * FROM user where user_name=#{userName} and user_password=#{userPassword}
+    </select>
+
+    <update id="updateUserLastLoginTime">
+        UPDATE user SET lasted_time =#{time} WHERE user_id = #{userId}
+    </update>
+
+    <select id="selectUserInfoByPhone" resultType="com.kf.pojo.User">
+        SELECT * FROM user WHERE user_phone = #{phone}
+    </select>
+
+    <select id="selectUserInfoByUserId" resultType="com.kf.pojo.User">
+        SELECT * FROM user where user_id=#{userId}
+    </select>
+
+
+    <select id="selectUserCollectionByUserId" resultType="java.lang.Integer">
+      SELECT pi_id FROM collection WHERE user_id = #{userId}
+    </select>
+
+
+    <select id="selectUserByUserEmail" resultType="java.lang.Integer">
+        SELECT count(user_id) from user WHERE user_email=#{userEmail}
+    </select>
+
+    <update id="updateUserPwd">
+        UPDATE user SET user_password=#{userPassword} WHERE user_id=#{userId}
+    </update>
+
+    <select id="selectUserCountByUserPhone" resultType="java.lang.Integer">
+        SELECT count(user_id) from user WHERE user_phone=#{userPhone} and user_id!=#{userId}
+    </select>
+
+    <select id="selectUserCountByUserEmail" resultType="java.lang.Integer">
+        SELECT count(user_id) from user WHERE user_email=#{userEmail} and user_id!=#{userId}
+    </select>
+
+    <select id="selectUserByUserPhone" resultType="java.lang.Integer">
+        SELECT count(user_id) from user WHERE user_phone=#{userPhone}
+    </select>
+
+    <select id="selectUserByUserName" resultType="java.lang.Integer">
+        SELECT count(user_id) from user where user_name=#{userName}
+    </select>
+
+    <update id="updateUserPhone">
+        UPDATE user SET user_phone=#{userPhone} where user_id=#{userId}
+    </update>
+
+    <update id="updateUserPassByUserPhone">
+        UPDATE user set user_password = #{userPassword} WHERE user_phone = #{phoneNum}
+    </update>
+
+    <update id="updateUserEmail">
+        UPDATE user SET user_email=#{userEmail} where user_id=#{userId}
+    </update>
+
+    <update id="updateUserProfileInfo">
+        UPDATE user SET user_description=#{userDescription} where user_id=#{userId}
+    </update>
+
+    <update id="updateUserImg">
+        UPDATE user SET user_img=#{userImg} where user_id=#{userId}
+    </update>
+
+    <update id="updateUserAttc">
+        UPDATE user SET user_attc=#{userAttc} where user_id=#{userId}
+    </update>
+</mapper>

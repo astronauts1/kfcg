@@ -1,0 +1,211 @@
+
+/*.info_box{*/
+    /*padding:10px 20px;*/
+    /*width: 78%;*/
+    /*border:1px #ddd solid;*/
+    /*margin-top: 30px;*/
+    /*float: left;*/
+/*}*/
+
+.person_box{
+    background: #fff;
+    padding: 30px 0 20px 0;
+}
+.person_box img{
+    width:190px;
+    height:190px;
+}
+
+.self_left{
+    background: #fff;
+    padding:30px 30px;
+}
+.self_ul{
+    width:100%;
+}
+.self_ul li{
+    margin: 0 20px 6px 0;
+    padding: 5px 5px;
+    float: left;
+    width:30%;
+}
+.self_ul li .s_title{
+    color: #aaa;
+    font-size:16px;
+}
+.self_ul li .s_content{
+    margin-left:10px;
+    font-size:14px;
+}
+
+.self_ul_1{
+    width:100%;
+}
+.self_ul_1 li{
+    margin: 0 20px 6px 0;
+    padding: 5px 5px;
+    float: left;
+    width:100%;
+}
+
+.push_base_static{
+    font-size: 12px;
+    color: #979a9e;
+    line-height: 40px;
+}
+.push_base_static a{
+    margin-right:30px;
+}
+.push_base_static span{
+    margin-right:30px;
+}
+.push_base_title{
+    margin-top:20px;
+}
+.push_base_data{
+    margin-top:10px;
+}
+.tag_name{
+    width:30%;
+    text-align: right;
+}
+.tag_content{
+    width:70%;
+}
+.push_base_other{
+    border-top:1px dashed #dbdbdb;
+}
+.contact_method{
+    font-size:18px;
+    font-weight: 500;
+    color: #ff552e;
+}
+.jinggao{
+    margin-top:20px;
+    height: 100px;
+    width: 33.33%;
+    background: #F7F7F7;
+}
+.alterInfo{
+    margin-top:20px;
+    width:80%;
+    font-size: 20px;
+    background: #F7F7F7;
+}
+.phoneNum{
+    margin-top:20px;
+    width:80%;
+    height:40px;
+    font-size: 25px;
+    color: #000;
+}
+/*.person_box{*/
+    /*width: 100%;*/
+    /*float: left;*/
+    /*border:1px solid #ddd;*/
+    /*padding:30px 20px;*/
+/*}*/
+/*.right_box{*/
+    /*width: 18%;*/
+    /*margin-left:10px;*/
+    /*margin-top: 30px;*/
+    /*float: left;*/
+
+/*}*/
+.touxiang{
+    width:120px;
+    height:120px;
+    margin-bottom: 20px;
+}
+
+ul, ol{list-style: none;
+    padding:0;}
+li{margin:0;
+    padding:0;}
+.cbody988{ margin:0 auto;width:988px; position:relative;}
+.cbody937{ margin:0 auto;width:937px; position:relative; padding-left:7px;}
+input,select,textarea,img{vertical-align:middle;}
+img{ border:0;}
+ul,li{list-style-type:none;}
+.overhide{overflow:hidden;text-indent:-100em;}
+/*位置属性*/
+.marTop10{margin-top:10px;}
+.left{	float:left;}
+.right{	float:right;}
+.clear {clear: both;}
+.clearfix:after {clear: both;content: '';display: block;font-size: 0;line-height: 0;visibility: hidden;width: 0;height: 0;}
+.clearfix {display: inline-block;}
+
+.imgnav{ width:100%; margin:10px auto;position:relative;}
+#content{margin:0px auto;  line-height:19px;}
+#content p{ text-indent:2em; color:#333;}
+
+#img{ z-index:10; width:100%; position:relative; text-align:center;}
+#img img{ height:380px; display:none; border:4px solid #000;}
+#cbtn{background:#EAEBF0; position:relative; height:122px; border:1px solid #D6D9DC; margin-top:12px; }
+#cbtn ul{position:relative; width:1000px; height:122px;}
+#cbtn ul li{ float:left; padding:8px 3px 3px 3px; width:116px; height:86px; cursor:pointer; text-align:center; margin-right:20px; position:relative;}
+#cbtn ul li img{ width:116px; height:86px; display:block;}
+
+.ctrl div{ clear:both;}
+#cSlideUl{width:400px; height:116px;overflow:hidden; position:relative; top:10px; margin:0 auto;}
+.picSildeLeft{cursor:pointer; position:absolute; top:32px; left:10px; z-index:9;}
+.picSildeRight{cursor:pointer; position:absolute; top:32px; right:10px; z-index:9;}
+
+
+.resume-base-info li{
+    padding: 7px 0;
+}
+.resume-base-title li{
+    font-size: 16px;
+    font-weight: 500;
+    color: #aaa;
+}
+.resume-base-content li{
+    margin-top: 2px;
+}
+
+.tuijian{
+    position: absolute;
+    top: -10px;
+    right: 0;
+    width: 83px;
+    height: 103px;
+}
+.recommend:hover{
+    background: rgb(248,248,248);
+}
+.recommend .re_district{
+    color: #aaa;
+    font-size:14px;
+}
+.recommend .re_income{
+    color: #ff552e;
+    font-size:16px;
+}
+.recommend{
+    margin-bottom:30px;
+}
+.panel-self{
+    margin-top: 40px;
+    border-top:1px dashed #aaaaaa;
+    border-bottom: 1px dashed #aaaaaa;
+}
+.info_logo h1 {
+    font-size: 40px;
+    margin: 10px 0 14px 0;
+    font-weight: 400;
+
+}
+.info_logo h1 a {
+    color: #fff;
+}
+.info_logo h1 a:hover {text-decoration: none;opacity: .7}
+.info_logo h1 a span {
+    color: #fff;
+}
+.push_btn{
+    background: #ff552e;
+    border: 1px solid #fff;margin-top: 20px;
+    color: #FFFFFF;
+}
